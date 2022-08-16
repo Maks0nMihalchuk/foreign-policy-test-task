@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		D70C8ED228ABF79600F36D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70C8ED028ABF79600F36D6C /* Main.storyboard */; };
 		D70C8ED428ABF79800F36D6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D70C8ED328ABF79800F36D6C /* Assets.xcassets */; };
 		D70C8ED728ABF79800F36D6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70C8ED528ABF79800F36D6C /* LaunchScreen.storyboard */; };
+		D70C8EE128AC248700F36D6C /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = D70C8EE028AC248700F36D6C /* NVActivityIndicatorView */; };
+		D70C8EE328AC248700F36D6C /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = D70C8EE228AC248700F36D6C /* NVActivityIndicatorViewExtended */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D70C8EE128AC248700F36D6C /* NVActivityIndicatorView in Frameworks */,
+				D70C8EE328AC248700F36D6C /* NVActivityIndicatorViewExtended in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +95,10 @@
 			dependencies = (
 			);
 			name = "foreign-policy-test-task";
+			packageProductDependencies = (
+				D70C8EE028AC248700F36D6C /* NVActivityIndicatorView */,
+				D70C8EE228AC248700F36D6C /* NVActivityIndicatorViewExtended */,
+			);
 			productName = "foreign-policy-test-task";
 			productReference = D70C8EC728ABF79600F36D6C /* foreign-policy-test-task.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +126,9 @@
 				Base,
 			);
 			mainGroup = D70C8EBE28ABF79600F36D6C;
+			packageReferences = (
+				D70C8EDF28AC248700F36D6C /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+			);
 			productRefGroup = D70C8EC828ABF79600F36D6C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -347,6 +358,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D70C8EDF28AC248700F36D6C /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D70C8EE028AC248700F36D6C /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D70C8EDF28AC248700F36D6C /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		D70C8EE228AC248700F36D6C /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D70C8EDF28AC248700F36D6C /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D70C8EBF28ABF79600F36D6C /* Project object */;
 }
