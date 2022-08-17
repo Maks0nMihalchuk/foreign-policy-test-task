@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ListViewProtocol: AnyObject {
-    
+    func loadRequest(with request: URLRequest)
 }

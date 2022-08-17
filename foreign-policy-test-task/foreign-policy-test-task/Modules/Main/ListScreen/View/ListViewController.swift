@@ -17,19 +17,18 @@ class ListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupUI()
         presenter?.startLoader()
-        guard let url = URL(string: "https://foreignpolicy.com/ml-api/v2/list") else { return }
-
-        let request = URLRequest(url: url)
-        webView.load(request)
+        presenter?.getUrlForLoadRequest()
     }
 }
 
 // MARK: - ListViewProtocol
 extension ListViewController: ListViewProtocol {
-    
+
+    func loadRequest(with request: URLRequest) {
+        webView.load(request)
+    }
 }
 
 // MARK: - WKNavigationDelegate
@@ -37,7 +36,6 @@ extension ListViewController: WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         presenter?.stopLoader()
-
     }
 }
 

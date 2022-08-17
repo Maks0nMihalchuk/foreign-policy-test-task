@@ -10,15 +10,21 @@ import Foundation
 class ListPresenter: ListPresenterProtocol {
 
     private let loader = Loader()
-    private let model: ListModel
+    private let model: ListModelProtocol
     private var transitions: ListTransitions
 
     weak var view: ListViewProtocol?
 
-    init(_ view: ListViewProtocol?, model: ListModel, transitions: ListTransitions) {
+    init(_ view: ListViewProtocol?, model: ListModelProtocol, transitions: ListTransitions) {
         self.view = view
         self.model = model
         self.transitions = transitions
+    }
+
+    func getUrlForLoadRequest() {
+        guard let request = model.createdRequest() else { return }
+
+        view?.loadRequest(with: request)
     }
 
     func startLoader() {

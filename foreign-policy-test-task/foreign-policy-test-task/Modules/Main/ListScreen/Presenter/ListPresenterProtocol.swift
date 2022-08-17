@@ -10,4 +10,5 @@ import Foundation
 protocol ListPresenterProtocol {
     func startLoader()
     func stopLoader()
+    func getUrlForLoadRequest()
 }

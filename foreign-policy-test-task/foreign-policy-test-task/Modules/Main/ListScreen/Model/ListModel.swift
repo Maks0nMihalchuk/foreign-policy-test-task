@@ -7,6 +7,16 @@
 
 import Foundation
 
-struct ListModel {
-    let mainUrl = "https://foreignpolicy.com/ml-api/v2/list "
+protocol ListModelProtocol {
+    func createdRequest() -> URLRequest?
+}
+
+struct ListModel: ListModelProtocol {
+    private let listUrl = "https://foreignpolicy.com/ml-api/v2/list"
+
+    func createdRequest() -> URLRequest? {
+        guard let url = URL(string: listUrl) else { return nil }
+
+        return URLRequest(url: url)
+    }
 }
