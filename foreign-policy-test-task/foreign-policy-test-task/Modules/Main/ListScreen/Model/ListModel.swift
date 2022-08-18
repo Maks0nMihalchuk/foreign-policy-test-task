@@ -7,12 +7,6 @@
 
 import Foundation
 
-protocol ListModelProtocol {
-    func createdRequest() -> URLRequest?
-    func getScript() -> String
-    func getJavaScriptEventName() -> String
-}
-
 class ListModel: ListModelProtocol {
     private let listUrl = "https://foreignpolicy.com/ml-api/v2/list"
     private let javaScriptEventName = "jsMessenger"
