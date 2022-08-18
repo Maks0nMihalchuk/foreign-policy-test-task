@@ -9,4 +9,5 @@ import Foundation
 
 protocol ListViewProtocol: AnyObject {
     func loadRequest(with request: URLRequest)
+    func setupWebViewJavaScriptHandler(with script: String, eventName name: String)
 }

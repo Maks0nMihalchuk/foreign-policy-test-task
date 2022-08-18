@@ -34,4 +34,10 @@ class ListPresenter: ListPresenterProtocol {
     func stopLoader() {
         loader.hide()
     }
+
+    func setupJavaScriptHandler() {
+        let script = model.getScript()
+        let javaScriptEventName = model.getJavaScriptEventName()
+        view?.setupWebViewJavaScriptHandler(with: script, eventName: javaScriptEventName)
+    }
 }

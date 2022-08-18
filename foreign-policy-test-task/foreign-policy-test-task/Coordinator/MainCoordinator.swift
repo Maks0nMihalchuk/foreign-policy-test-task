@@ -27,7 +27,6 @@ final class MainCoordinator: Coordinator {
         }
 
         let controller = builder.buildListVC(transition: transition)
-        self.navigationController.navigationBar.isHidden = true
         setRoot(controller, animated: false)
     }
 }

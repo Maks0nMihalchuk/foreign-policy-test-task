@@ -12,7 +12,7 @@ class Loader {
 
     var activityIndicator: NVActivityIndicatorView =  {
         let frame = CGRect(origin: UIScreen.main.bounds.center, size: CGSize(width: 30, height: 30))
-        let color = UIColor.blue
+        let color = UIColor(red: .zero, green: 0.463, blue: 1, alpha: 1.0)
         let type = NVActivityIndicatorType.circleStrokeSpin
         let actINd = NVActivityIndicatorView(frame: frame, type: type, color: color, padding: nil)
         actINd.isHidden = false

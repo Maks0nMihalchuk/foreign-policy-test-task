@@ -20,6 +20,7 @@ class ListViewController: UIViewController {
         setupUI()
         presenter?.startLoader()
         presenter?.getUrlForLoadRequest()
+        presenter?.setupJavaScriptHandler()
     }
 }
 
@@ -28,6 +29,22 @@ extension ListViewController: ListViewProtocol {
 
     func loadRequest(with request: URLRequest) {
         webView.load(request)
+    }
+
+    func setupWebViewJavaScriptHandler(with script: String, eventName name: String) {
+        let userJavaScriptHandler = WKUserScript(source: script,
+                                                 injectionTime: .atDocumentStart,
+                                                 forMainFrameOnly: true)
+        webView.configuration.userContentController.addUserScript(userJavaScriptHandler)
+        webView.configuration.userContentController.add(self, name: name)
+    }
+}
+
+// MARK: - WKScriptMessageHandler
+extension ListViewController: WKScriptMessageHandler {
+
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        print(message.body)
     }
 }
 
@@ -44,6 +61,11 @@ private extension ListViewController {
 
     func setupUI() {
         setupWebView()
+        setupNavigationBar()
+    }
+
+    func setupNavigationBar() {
+        self.title = "Feed"
     }
 
     func setupWebView() {
