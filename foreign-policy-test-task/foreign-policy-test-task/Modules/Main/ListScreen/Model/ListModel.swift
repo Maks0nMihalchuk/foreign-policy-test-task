@@ -12,16 +12,38 @@ class ListModel: ListModelProtocol {
     private let javaScriptEventName = "jsMessenger"
     private let javaScript = """
                 window.onload = function() {
-                    let ctas = document.querySelectorAll('.article-list__wrap');
-                    ctas.forEach(cta => {
-                      cta.addEventListener('click', (post) => {
-                        try {
-                        let elt = post.target.closest("ons-list-item");
-                        let postId = elt.getAttribute('data-ml-post-id');
-                        window.webkit.messageHandlers.jsMessenger.postMessage(postId);
-                      } catch {}
-                      });
+                    let id = ""
+                    function clickHandler()  {
+                        let ctas = document.querySelectorAll('.article-list__wrap');
+                        ctas.forEach(cta => {
+                            cta.addEventListener('click', (post) => {
+                                try {
+                                    let elt = post.target.closest("ons-list-item");
+                                    let postId = elt.getAttribute('data-ml-post-id');
+                                    if (id == postId) { return }
+                                    else {
+                                        id = postId;
+                                    }
+
+                                    window.webkit.messageHandlers.jsMessenger.postMessage(postId);
+                                } catch {}
+                            });
+                        });
+                    }
+
+                    var observer = new MutationObserver(function(mutations) {
+                        mutations.forEach(function(mutationRecord) {
+                            clickHandler()
+                        });
                     });
+                    var target = document.getElementById('article-list');
+                    var observerConfig = {
+                        attributes: true,
+                        childList: true,
+                        characterData: true
+                    };
+                    observer.observe(target, observerConfig);
+                    clickHandler()
                 }
                 """
 

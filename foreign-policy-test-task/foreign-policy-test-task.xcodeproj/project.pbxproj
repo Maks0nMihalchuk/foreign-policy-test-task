@@ -106,7 +106,6 @@
 				D70C8ECC28ABF79600F36D6C /* SceneDelegate.swift */,
 				D70C8F1028ACF40B00F36D6C /* Coordinator */,
 				D70C8F1C28AD01C500F36D6C /* Modules */,
-				D70C8F0928ACE64D00F36D6C /* ListStoryboard.storyboard */,
 				D70C8EFA28AC2AC700F36D6C /* Helpers */,
 				D70C8EF528AC2A8600F36D6C /* Extension  */,
 				D70C8EDE28AC068D00F36D6C /* Resources */,
@@ -148,6 +147,7 @@
 				D70C8F0028AC2C3800F36D6C /* View */,
 				D70C8F0228AC2C6300F36D6C /* Presenter */,
 				D70C8F0128AC2C5D00F36D6C /* Model */,
+				D76EE43C28AED0D600ACEB2B /* Storyboard */,
 			);
 			path = ListScreen;
 			sourceTree = "<group>";
@@ -258,6 +258,14 @@
 			isa = PBXGroup;
 			children = (
 				D70C8F4028AE555D00F36D6C /* PostStoryboard.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D76EE43C28AED0D600ACEB2B /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D70C8F0928ACE64D00F36D6C /* ListStoryboard.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
