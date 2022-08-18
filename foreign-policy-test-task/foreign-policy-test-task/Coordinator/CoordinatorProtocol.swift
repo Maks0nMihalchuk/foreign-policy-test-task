@@ -8,15 +8,23 @@
 import UIKit
 
 typealias VoidCallBack = (() -> Void)
+typealias BlockWith<T> = ((T) -> Void)
 
-protocol Coordinator: AnyObject {
+protocol CoordinatorProtocol: AnyObject {
     var navigationController: UINavigationController { get set }
+    var childCoordinators: [CoordinatorProtocol] { get set }
 
+    func addChildCoordinator(_ coordinator: CoordinatorProtocol)
     func start()
 }
 
 // MARK: - Additional functionality
-extension Coordinator {
+extension CoordinatorProtocol {
+
+    func addChildCoordinator(_ coordinator: CoordinatorProtocol) {
+        childCoordinators.forEach { if $0 === coordinator { return } }
+        childCoordinators.append(coordinator)
+    }
 
     func setRoot(_ viewController: UIViewController, animated: Bool = true) {
         self.navigationController.setViewControllers([viewController], animated: animated)

@@ -10,4 +10,5 @@ import UIKit
 protocol MainModuleBuilderProtocol: BuilderProtocol {
 
     func buildListVC(transition: ListTransitions) -> ListViewController
+    func buildPostVC(with postID: String) -> PostViewController
 }

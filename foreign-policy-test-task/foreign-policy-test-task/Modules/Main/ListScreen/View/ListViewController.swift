@@ -44,7 +44,9 @@ extension ListViewController: ListViewProtocol {
 extension ListViewController: WKScriptMessageHandler {
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        print(message.body)
+        guard let postID = message.body as? String else { return }
+
+        presenter?.didTapOnPost(with: postID)
     }
 }
 

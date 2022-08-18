@@ -21,6 +21,10 @@ class ListPresenter: ListPresenterProtocol {
         self.transitions = transitions
     }
 
+    func didTapOnPost(with postID: String) {
+        transitions.post(postID)
+    }
+
     func getUrlForLoadRequest() {
         guard let request = model.createdRequest() else { return }
 
