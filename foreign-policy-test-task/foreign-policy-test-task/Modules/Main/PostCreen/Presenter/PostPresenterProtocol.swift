@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+protocol PostPresenterProtocol {
+    func getUrlForLoadRequest()
+    func startLoader()
+    func stopLoader()
+}

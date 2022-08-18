@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol PostModelProtocol {
+    func createdRequest() -> URLRequest?
+    func getPostID() -> String
+}

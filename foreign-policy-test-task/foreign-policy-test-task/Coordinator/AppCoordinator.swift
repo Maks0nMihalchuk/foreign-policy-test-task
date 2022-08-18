@@ -7,12 +7,14 @@
 
 import UIKit
 
-final class AppCoordinator: Coordinator {
+final class AppCoordinator: CoordinatorProtocol {
 
     var window: UIWindow
+    var childCoordinators: [CoordinatorProtocol]
     var navigationController: UINavigationController
 
     init(window: UIWindow) {
+        self.childCoordinators = []
         self.window = window
         self.navigationController = UINavigationController()
         self.window.rootViewController = navigationController
@@ -26,6 +28,7 @@ final class AppCoordinator: Coordinator {
     private func mainFlow() {
         let builder = MainModuleBuilder()
         let mainCoordinator = MainCoordinator(navigationController, builder: builder)
+        self.addChildCoordinator(mainCoordinator)
         mainCoordinator.start()
     }
 }

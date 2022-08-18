@@ -12,4 +12,5 @@ protocol ListPresenterProtocol {
     func stopLoader()
     func getUrlForLoadRequest()
     func setupJavaScriptHandler()
+    func didTapOnPost(with postID: String)
 }

@@ -21,7 +21,7 @@
 		D70C8F0828AC2CA700F36D6C /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C8F0728AC2CA700F36D6C /* ListPresenter.swift */; };
 		D70C8F0B28ACE64D00F36D6C /* ListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70C8F0928ACE64D00F36D6C /* ListStoryboard.storyboard */; };
 		D70C8F0D28ACF28100F36D6C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C8F0C28ACF28100F36D6C /* AppCoordinator.swift */; };
-		D70C8F0F28ACF2B900F36D6C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C8F0E28ACF2B900F36D6C /* Coordinator.swift */; };
+		D70C8F0F28ACF2B900F36D6C /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C8F0E28ACF2B900F36D6C /* CoordinatorProtocol.swift */; };
 		D70C8F1228ACF41B00F36D6C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C8F1128ACF41B00F36D6C /* MainCoordinator.swift */; };
 		D70C8F1528ACF67300F36D6C /* MainModuleBuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C8F1428ACF67300F36D6C /* MainModuleBuilderProtocol.swift */; };
 		D70C8F1728ACFA9D00F36D6C /* BuilderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C8F1628ACFA9D00F36D6C /* BuilderProtocol.swift */; };
@@ -53,7 +53,7 @@
 		D70C8F0728AC2CA700F36D6C /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		D70C8F0A28ACE64D00F36D6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ListStoryboard.storyboard; sourceTree = "<group>"; };
 		D70C8F0C28ACF28100F36D6C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		D70C8F0E28ACF2B900F36D6C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D70C8F0E28ACF2B900F36D6C /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		D70C8F1128ACF41B00F36D6C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		D70C8F1428ACF67300F36D6C /* MainModuleBuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleBuilderProtocol.swift; sourceTree = "<group>"; };
 		D70C8F1628ACFA9D00F36D6C /* BuilderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderProtocol.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				D70C8F0C28ACF28100F36D6C /* AppCoordinator.swift */,
-				D70C8F0E28ACF2B900F36D6C /* Coordinator.swift */,
+				D70C8F0E28ACF2B900F36D6C /* CoordinatorProtocol.swift */,
 				D70C8F1128ACF41B00F36D6C /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -344,7 +344,7 @@
 				D70C8ECF28ABF79600F36D6C /* ListViewController.swift in Sources */,
 				D70C8F1528ACF67300F36D6C /* MainModuleBuilderProtocol.swift in Sources */,
 				D70C8EFC28AC2AF300F36D6C /* UIWindow+Extension.swift in Sources */,
-				D70C8F0F28ACF2B900F36D6C /* Coordinator.swift in Sources */,
+				D70C8F0F28ACF2B900F36D6C /* CoordinatorProtocol.swift in Sources */,
 				D70C8F3E28AE553F00F36D6C /* PostModel.swift in Sources */,
 				D70C8F2028AD01F800F36D6C /* MainModuleBuilder.swift in Sources */,
 				D70C8F0828AC2CA700F36D6C /* ListPresenter.swift in Sources */,

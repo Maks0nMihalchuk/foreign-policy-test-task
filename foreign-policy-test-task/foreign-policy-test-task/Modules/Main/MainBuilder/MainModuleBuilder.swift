@@ -8,7 +8,7 @@
 import UIKit
 
 struct ListTransitions {
-    let post: VoidCallBack
+    let post: BlockWith<String>
 }
 
 class MainModuleBuilder: MainModuleBuilderProtocol {
@@ -23,6 +23,21 @@ class MainModuleBuilder: MainModuleBuilderProtocol {
         }
 
         let presenter = ListPresenter(controller, model: model, transitions: transition)
+
+        viewController.presenter = presenter
+        return viewController
+    }
+
+    func buildPostVC(with postID: String) -> PostViewController {
+        let controllerId = String(describing: PostViewController.self)
+        let model = PostModel(postID: postID)
+        let controller = getViewController(controllerID: controllerId,
+                                           storyboardName: .PostStoryboard) as? PostViewController
+        guard let viewController = controller else {
+            fatalError("Couldn’t instantiate view controller with identifier \(controllerId)")
+        }
+
+        let presenter = PostPresenter(controller, model: model)
 
         viewController.presenter = presenter
         return viewController

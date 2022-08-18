@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol PostViewProtocol: AnyObject {
+    func loadRequest(with request: URLRequest)
+}
