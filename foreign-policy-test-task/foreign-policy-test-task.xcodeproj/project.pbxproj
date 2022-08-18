@@ -28,6 +28,7 @@
 		D70C8F1928ACFB7D00F36D6C /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C8F1828ACFB7D00F36D6C /* Storyboard.swift */; };
 		D70C8F1B28ACFC5F00F36D6C /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C8F1A28ACFC5F00F36D6C /* ListModel.swift */; };
 		D70C8F2028AD01F800F36D6C /* MainModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C8F1F28AD01F800F36D6C /* MainModuleBuilder.swift */; };
+		D70C8F2E28AE540C00F36D6C /* ListModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C8F2D28AE540C00F36D6C /* ListModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		D70C8F1828ACFB7D00F36D6C /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		D70C8F1A28ACFC5F00F36D6C /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		D70C8F1F28AD01F800F36D6C /* MainModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleBuilder.swift; sourceTree = "<group>"; };
+		D70C8F2D28AE540C00F36D6C /* ListModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModelProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		D70C8F0128AC2C5D00F36D6C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D70C8F2D28AE540C00F36D6C /* ListModelProtocol.swift */,
 				D70C8F1A28ACFC5F00F36D6C /* ListModel.swift */,
 			);
 			path = Model;
@@ -289,6 +292,7 @@
 				D70C8F1728ACFA9D00F36D6C /* BuilderProtocol.swift in Sources */,
 				D70C8F1928ACFB7D00F36D6C /* Storyboard.swift in Sources */,
 				D70C8F0D28ACF28100F36D6C /* AppCoordinator.swift in Sources */,
+				D70C8F2E28AE540C00F36D6C /* ListModelProtocol.swift in Sources */,
 				D70C8F0428AC2C7900F36D6C /* ListViewProtocol.swift in Sources */,
 				D70C8EFE28AC2B0F00F36D6C /* Loader.swift in Sources */,
 			);
