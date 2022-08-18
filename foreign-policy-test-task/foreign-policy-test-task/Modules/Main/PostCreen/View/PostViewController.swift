@@ -20,6 +20,11 @@ class PostViewController: UIViewController {
         presenter?.startLoader()
         presenter?.getUrlForLoadRequest()
     }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        presenter?.stopLoader()
+    }
 }
 
 // MARK: - PostViewProtocol

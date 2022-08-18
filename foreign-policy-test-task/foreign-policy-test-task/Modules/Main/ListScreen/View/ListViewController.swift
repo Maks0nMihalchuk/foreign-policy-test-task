@@ -22,6 +22,11 @@ class ListViewController: UIViewController {
         presenter?.getUrlForLoadRequest()
         presenter?.setupJavaScriptHandler()
     }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        presenter?.stopLoader()
+    }
 }
 
 // MARK: - ListViewProtocol
